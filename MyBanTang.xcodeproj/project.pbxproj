@@ -14,6 +14,9 @@
 		251D5AA21C9F9EC000C15F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251D5AA01C9F9EC000C15F52 /* LaunchScreen.storyboard */; };
 		251D5AAD1C9F9EC000C15F52 /* MyBanTangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D5AAC1C9F9EC000C15F52 /* MyBanTangTests.swift */; };
 		251D5AB81C9F9EC000C15F52 /* MyBanTangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D5AB71C9F9EC000C15F52 /* MyBanTangUITests.swift */; };
+		2553835D1C9FE8DF00612669 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */; };
+		2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835E1C9FE90C00612669 /* MainTabBarController.swift */; };
+		255383631C9FFACE00612669 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255383621C9FFACE00612669 /* Configuration.swift */; };
 		78494980890354386070456A /* libPods-MyBanTang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CE044BDFE4E0FBA02F03E0 /* libPods-MyBanTang.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		251D5AB31C9F9EC000C15F52 /* MyBanTangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBanTangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		251D5AB71C9F9EC000C15F52 /* MyBanTangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBanTangUITests.swift; sourceTree = "<group>"; };
 		251D5AB91C9F9EC000C15F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2553835E1C9FE90C00612669 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		255383621C9FFACE00612669 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		90A21F0F72B7ECFC9961E0DC /* Pods-MyBanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang.release.xcconfig"; sourceTree = "<group>"; };
 		D74408E3D4D4F6248E0BDE24 /* Pods-MyBanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,12 +110,16 @@
 		251D5A961C9F9EC000C15F52 /* MyBanTang */ = {
 			isa = PBXGroup;
 			children = (
+				255383601C9FFA7A00612669 /* SupportFiles */,
+				255383591C9FE38300612669 /* FirstPage */,
 				251D5A971C9F9EC000C15F52 /* AppDelegate.swift */,
 				251D5A991C9F9EC000C15F52 /* ViewController.swift */,
 				251D5A9B1C9F9EC000C15F52 /* Main.storyboard */,
 				251D5A9E1C9F9EC000C15F52 /* Assets.xcassets */,
 				251D5AA01C9F9EC000C15F52 /* LaunchScreen.storyboard */,
 				251D5AA31C9F9EC000C15F52 /* Info.plist */,
+				2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */,
+				2553835E1C9FE90C00612669 /* MainTabBarController.swift */,
 			);
 			path = MyBanTang;
 			sourceTree = "<group>";
@@ -130,6 +140,29 @@
 				251D5AB91C9F9EC000C15F52 /* Info.plist */,
 			);
 			path = MyBanTangUITests;
+			sourceTree = "<group>";
+		};
+		255383591C9FE38300612669 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FirstPage;
+			sourceTree = "<group>";
+		};
+		255383601C9FFA7A00612669 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				255383611C9FFA9500612669 /* config */,
+			);
+			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		255383611C9FFA9500612669 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				255383621C9FFACE00612669 /* Configuration.swift */,
+			);
+			name = config;
 			sourceTree = "<group>";
 		};
 		8DD0F7203E12A3D86D8BFDC9 /* Pods */ = {
@@ -331,7 +364,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2553835D1C9FE8DF00612669 /* WelcomeViewController.swift in Sources */,
+				255383631C9FFACE00612669 /* Configuration.swift in Sources */,
 				251D5A9A1C9F9EC000C15F52 /* ViewController.swift in Sources */,
+				2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */,
 				251D5A981C9F9EC000C15F52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
