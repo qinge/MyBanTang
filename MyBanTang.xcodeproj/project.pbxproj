@@ -14,6 +14,7 @@
 		251D5AA21C9F9EC000C15F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251D5AA01C9F9EC000C15F52 /* LaunchScreen.storyboard */; };
 		251D5AAD1C9F9EC000C15F52 /* MyBanTangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D5AAC1C9F9EC000C15F52 /* MyBanTangTests.swift */; };
 		251D5AB81C9F9EC000C15F52 /* MyBanTangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D5AB71C9F9EC000C15F52 /* MyBanTangUITests.swift */; };
+		78494980890354386070456A /* libPods-MyBanTang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CE044BDFE4E0FBA02F03E0 /* libPods-MyBanTang.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12CE044BDFE4E0FBA02F03E0 /* libPods-MyBanTang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyBanTang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		251D5A941C9F9EC000C15F52 /* MyBanTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBanTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		251D5A971C9F9EC000C15F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		251D5A991C9F9EC000C15F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		251D5AB31C9F9EC000C15F52 /* MyBanTangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBanTangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		251D5AB71C9F9EC000C15F52 /* MyBanTangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBanTangUITests.swift; sourceTree = "<group>"; };
 		251D5AB91C9F9EC000C15F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90A21F0F72B7ECFC9961E0DC /* Pods-MyBanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang.release.xcconfig"; sourceTree = "<group>"; };
+		D74408E3D4D4F6248E0BDE24 /* Pods-MyBanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78494980890354386070456A /* libPods-MyBanTang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				251D5AAB1C9F9EC000C15F52 /* MyBanTangTests */,
 				251D5AB61C9F9EC000C15F52 /* MyBanTangUITests */,
 				251D5A951C9F9EC000C15F52 /* Products */,
+				8DD0F7203E12A3D86D8BFDC9 /* Pods */,
+				D9EB42BD433702B722407977 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = MyBanTangUITests;
 			sourceTree = "<group>";
 		};
+		8DD0F7203E12A3D86D8BFDC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D74408E3D4D4F6248E0BDE24 /* Pods-MyBanTang.debug.xcconfig */,
+				90A21F0F72B7ECFC9961E0DC /* Pods-MyBanTang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9EB42BD433702B722407977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12CE044BDFE4E0FBA02F03E0 /* libPods-MyBanTang.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 251D5ABC1C9F9EC000C15F52 /* Build configuration list for PBXNativeTarget "MyBanTang" */;
 			buildPhases = (
+				3B3D002591A8FA17B4C6D441 /* Check Pods Manifest.lock */,
 				251D5A901C9F9EC000C15F52 /* Sources */,
 				251D5A911C9F9EC000C15F52 /* Frameworks */,
 				251D5A921C9F9EC000C15F52 /* Resources */,
+				6E6B89687832EB7FE539F66A /* Embed Pods Frameworks */,
+				82A376D92A406B9BE220B6B2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B3D002591A8FA17B4C6D441 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6E6B89687832EB7FE539F66A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82A376D92A406B9BE220B6B2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		251D5A901C9F9EC000C15F52 /* Sources */ = {
@@ -397,6 +472,7 @@
 		};
 		251D5ABD1C9F9EC000C15F52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D74408E3D4D4F6248E0BDE24 /* Pods-MyBanTang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyBanTang/Info.plist;
@@ -408,6 +484,7 @@
 		};
 		251D5ABE1C9F9EC000C15F52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90A21F0F72B7ECFC9961E0DC /* Pods-MyBanTang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyBanTang/Info.plist;
@@ -484,6 +561,7 @@
 				251D5ABE1C9F9EC000C15F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		251D5ABF1C9F9EC000C15F52 /* Build configuration list for PBXNativeTarget "MyBanTangTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +570,7 @@
 				251D5AC11C9F9EC000C15F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		251D5AC21C9F9EC000C15F52 /* Build configuration list for PBXNativeTarget "MyBanTangUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +579,7 @@
 				251D5AC41C9F9EC000C15F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
