@@ -6,6 +6,9 @@
 //  Copyright © 2016年 snqu-ios. All rights reserved.
 //
 
+//  http://www.jianshu.com/p/7b57eb0c4abe
+
+
 import UIKit
 
 @UIApplicationMain
