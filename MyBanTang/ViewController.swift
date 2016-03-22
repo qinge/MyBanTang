@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         if NSUserDefaults.standardUserDefaults().objectForKey("FirstStart") != nil {
             return MainTabBarController()
         }else {
-            NSUserDefaults.standardUserDefaults().setObject("FirstStart", forKey: "FirstStart")
+//            NSUserDefaults.standardUserDefaults().setObject("FirstStart", forKey: "FirstStart")
             return WelcomeViewController()
         }
     }
