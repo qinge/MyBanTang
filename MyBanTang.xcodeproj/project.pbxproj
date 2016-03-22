@@ -176,8 +176,8 @@
 		25FF7EBE1CA10E19006D62A6 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */,
 				25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */,
+				25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";

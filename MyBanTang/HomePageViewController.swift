@@ -8,10 +8,13 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating ,UISearchBarDelegate {
     
     var customBar = UIView()
-
+    var searchController: UISearchController!
+    @IBOutlet var tableView: UITableView!
+    
+    var shouldResetStateBar: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,26 +26,57 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
 //        self.navigationController?.hidesBarsOnSwipe = true
         
         if self.respondsToSelector("barHideOnSwipeGestureRecognizer") {
-            self.navigationController?.hidesBarsOnSwipe = true
-            self.navigationController?.barHideOnSwipeGestureRecognizer.addTarget(self, action: "swipe")
+            
         }
+        
+        self.navigationController?.hidesBarsOnSwipe = true
+        self.navigationController?.barHideOnSwipeGestureRecognizer.addTarget(self, action: "swipe")
+        
+        self.configureSearchController()
+        
+        self.navigationItem.titleView = searchController.searchBar
+//        tableView.tableHeaderView = searchController.searchBar
+        shouldResetStateBar = false
     }
     
     func swipe(){
-        let shouldHideStatusBar = self.navigationController!.navigationBar.frame.origin.y < 0
+//        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
+        self.prefersStatusBarHidden()
         UIView.animateWithDuration(0.2) { () -> Void in
             self.setNeedsStatusBarAppearanceUpdate()
         }
     }
     
+    
+    
+    func configureSearchController() {
+        // Initialize and perform a minimum configuration to the search controller.
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search here..."
+        searchController.searchBar.delegate = self
+        searchController.searchBar.sizeToFit()
+        
+        // Place the search bar view to the tableview headerview.
+//        tblSearchResults.tableHeaderView = searchController.searchBar
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return self.navigationController!.navigationBar.frame.origin.y < 0
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        if shouldResetStateBar == true {
+            self.navigationController?.navigationBarHidden = false
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 //        self.title = "haha"
+        shouldResetStateBar = true;
     }
     
     
@@ -76,6 +110,11 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell!
     }
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        self.performSegueWithIdentifier("test", sender: self)
+    }
+    
     // MARK: - UITableViewDelegate
 //    func scrollViewDidScroll(scrollView: UIScrollView) {
 //        let contentOfsetY = scrollView.contentOffset.y
@@ -86,5 +125,16 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
 //        }
 //    }
     
+    
+    //MARK: - UISearchResultsUpdating
+    func updateSearchResultsForSearchController(searchController: UISearchController){
+
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.hidesBarsOnSwipe = false
+    }
     
 }
