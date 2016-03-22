@@ -67,8 +67,8 @@ extension UIColor {
         
 //        let f = Float(CGFloat(rValue) / 255.0)
         let rf = CGFloat(Float(rValue) / 255.0)
-        let gf = CGFloat(Float(rValue) / 255.0)
-        let bf = CGFloat(Float(rValue) / 255.0)
+        let gf = CGFloat(Float(gValue) / 255.0)
+        let bf = CGFloat(Float(bValue) / 255.0)
         return UIColor(red: rf, green: gf, blue: bf, alpha: CGFloat(alpha))
     }
 }

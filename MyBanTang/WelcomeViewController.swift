@@ -113,7 +113,7 @@ class WelcomeViewController: UIViewController, UITableViewDataSource, UITableVie
                 //延时2s 移除tableview
                 UIView.animateWithDuration(0.5, animations: { () -> Void in
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
-                        weakSelf!.showTableView.removeFromSuperview()
+                        self.showTableView.removeFromSuperview()
                     })
                 })
                 weakSelf!.startButton.alpha = 1.0

@@ -17,6 +17,12 @@
 		2553835D1C9FE8DF00612669 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */; };
 		2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835E1C9FE90C00612669 /* MainTabBarController.swift */; };
 		255383631C9FFACE00612669 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255383621C9FFACE00612669 /* Configuration.swift */; };
+		25FF7EC01CA10E60006D62A6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */; };
+		25FF7EC21CA10E86006D62A6 /* HomePageNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */; };
+		25FF7EC51CA1126E006D62A6 /* SquareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */; };
+		25FF7EC71CA1128A006D62A6 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC61CA1128A006D62A6 /* SquareViewController.swift */; };
+		25FF7EC91CA137D7006D62A6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC81CA137D7006D62A6 /* BaseNavigationController.swift */; };
+		25FF7ECB1CA1380E006D62A6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7ECA1CA1380E006D62A6 /* BaseViewController.swift */; };
 		78494980890354386070456A /* libPods-MyBanTang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CE044BDFE4E0FBA02F03E0 /* libPods-MyBanTang.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +61,12 @@
 		2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2553835E1C9FE90C00612669 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		255383621C9FFACE00612669 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageNavigationController.swift; sourceTree = "<group>"; };
+		25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareNavigationController.swift; sourceTree = "<group>"; };
+		25FF7EC61CA1128A006D62A6 /* SquareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
+		25FF7EC81CA137D7006D62A6 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		25FF7ECA1CA1380E006D62A6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		90A21F0F72B7ECFC9961E0DC /* Pods-MyBanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang.release.xcconfig"; sourceTree = "<group>"; };
 		D74408E3D4D4F6248E0BDE24 /* Pods-MyBanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanTang/Pods-MyBanTang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,8 +122,9 @@
 		251D5A961C9F9EC000C15F52 /* MyBanTang */ = {
 			isa = PBXGroup;
 			children = (
+				25FF7EBE1CA10E19006D62A6 /* HomePage */,
+				25FF7EC31CA1123C006D62A6 /* Square */,
 				255383601C9FFA7A00612669 /* SupportFiles */,
-				255383591C9FE38300612669 /* FirstPage */,
 				251D5A971C9F9EC000C15F52 /* AppDelegate.swift */,
 				251D5A991C9F9EC000C15F52 /* ViewController.swift */,
 				251D5A9B1C9F9EC000C15F52 /* Main.storyboard */,
@@ -120,6 +133,8 @@
 				251D5AA31C9F9EC000C15F52 /* Info.plist */,
 				2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */,
 				2553835E1C9FE90C00612669 /* MainTabBarController.swift */,
+				25FF7EC81CA137D7006D62A6 /* BaseNavigationController.swift */,
+				25FF7ECA1CA1380E006D62A6 /* BaseViewController.swift */,
 			);
 			path = MyBanTang;
 			sourceTree = "<group>";
@@ -142,13 +157,6 @@
 			path = MyBanTangUITests;
 			sourceTree = "<group>";
 		};
-		255383591C9FE38300612669 /* FirstPage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FirstPage;
-			sourceTree = "<group>";
-		};
 		255383601C9FFA7A00612669 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +171,24 @@
 				255383621C9FFACE00612669 /* Configuration.swift */,
 			);
 			name = config;
+			sourceTree = "<group>";
+		};
+		25FF7EBE1CA10E19006D62A6 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */,
+				25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
+		25FF7EC31CA1123C006D62A6 /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */,
+				25FF7EC61CA1128A006D62A6 /* SquareViewController.swift */,
+			);
+			name = Square;
 			sourceTree = "<group>";
 		};
 		8DD0F7203E12A3D86D8BFDC9 /* Pods */ = {
@@ -364,11 +390,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25FF7EC51CA1126E006D62A6 /* SquareNavigationController.swift in Sources */,
 				2553835D1C9FE8DF00612669 /* WelcomeViewController.swift in Sources */,
+				25FF7ECB1CA1380E006D62A6 /* BaseViewController.swift in Sources */,
 				255383631C9FFACE00612669 /* Configuration.swift in Sources */,
+				25FF7EC01CA10E60006D62A6 /* HomePageViewController.swift in Sources */,
+				25FF7EC21CA10E86006D62A6 /* HomePageNavigationController.swift in Sources */,
 				251D5A9A1C9F9EC000C15F52 /* ViewController.swift in Sources */,
 				2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */,
 				251D5A981C9F9EC000C15F52 /* AppDelegate.swift in Sources */,
+				25FF7EC91CA137D7006D62A6 /* BaseNavigationController.swift in Sources */,
+				25FF7EC71CA1128A006D62A6 /* SquareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

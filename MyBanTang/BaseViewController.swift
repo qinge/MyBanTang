@@ -1,21 +1,19 @@
 //
-//  MainTabBarController.swift
+//  BaseViewController.swift
 //  MyBanTang
 //
-//  Created by snqu-ios on 16/3/21.
+//  Created by snqu-ios on 16/3/22.
 //  Copyright © 2016年 snqu-ios. All rights reserved.
 //
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
-    
-    
+class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        changeNavigationBarTintColor()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,17 +31,5 @@ class MainTabBarController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    func changeNavigationBarTintColor(){
-        let navArray = self.viewControllers as! [UINavigationController]
-        for var i = 0; i < self.viewControllers?.count; i++ {
-            let nav = navArray[i]
-            nav.navigationBar.barTintColor = CustomBarTintColor
-            nav.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-            nav.navigationBar.translucent = false
-        }
-
-    }
-    
 
 }
