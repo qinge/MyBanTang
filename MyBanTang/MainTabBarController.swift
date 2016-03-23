@@ -38,11 +38,17 @@ class MainTabBarController: UITabBarController {
         let navArray = self.viewControllers as! [UINavigationController]
         for var i = 0; i < self.viewControllers?.count; i++ {
             let nav = navArray[i]
+            // 左右文字颜色
+            nav.navigationBar.tintColor = UIColor.whiteColor()
+            
+            // 导航栏颜色
             nav.navigationBar.barTintColor = CustomBarTintColor
+            
+            // 标题颜色
             nav.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
             nav.navigationBar.translucent = false
         }
-//        self.tabBar.backgroundColor = UIColor.whiteColor()
+        self.tabBar.barTintColor = UIColor.whiteColor()
         self.tabBar.translucent = false
     }
     
