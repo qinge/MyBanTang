@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -55,73 +55,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y9O-mt-Yp5">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pTK-s5-UIY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="O53-4J-Gb3">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O53-4J-Gb3" id="1Ft-JX-Ycw">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LzA-za-I70">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="50" height="150"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="OuJ-mM-PwD">
+                                        <rect key="frame" x="5" y="219" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <connections>
-                                            <segue destination="bVm-Fw-02b" kind="show" identifier="test" id="rPf-TL-MFC"/>
+                                            <segue destination="h1e-ja-Wse" kind="show" identifier="HomeDetailViewControllerSegue" id="Oa9-T7-NJY"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomePageCollectionReusableView" id="cwZ-KX-1jK" customClass="HomePageCollectionReusableView" customModule="MyBanTang" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.63894209369999999" green="0.8598760124" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </collectionReusableView>
                                 <connections>
-                                    <outlet property="dataSource" destination="eMy-mU-J8o" id="X5d-rX-jFf"/>
-                                    <outlet property="delegate" destination="eMy-mU-J8o" id="FRo-63-teF"/>
+                                    <outlet property="dataSource" destination="eMy-mU-J8o" id="jlG-l5-AFN"/>
+                                    <outlet property="delegate" destination="eMy-mU-J8o" id="1Km-JM-Ddo"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pTK-s5-UIY" firstAttribute="top" secondItem="IID-fb-IQC" secondAttribute="top" id="F08-eP-tNM"/>
+                            <constraint firstAttribute="trailing" secondItem="pTK-s5-UIY" secondAttribute="trailing" id="b5k-NF-vG5"/>
+                            <constraint firstAttribute="bottom" secondItem="pTK-s5-UIY" secondAttribute="bottom" id="cM8-BG-nUg"/>
+                            <constraint firstItem="pTK-s5-UIY" firstAttribute="leading" secondItem="IID-fb-IQC" secondAttribute="leading" id="uTb-KP-ljT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="home page" id="7dW-0z-aTv">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="alc-I8-6Nt">
-                            <connections>
-                                <segue destination="bVm-Fw-02b" kind="show" id="qev-72-tys"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" title="签到" id="cRP-mO-j3X">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="alc-I8-6Nt">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="Y9O-mt-Yp5" id="Ckr-4I-d6S"/>
+                        <outlet property="homePageCollectionView" destination="pTK-s5-UIY" id="Z9H-aO-NdO"/>
+                        <outlet property="searchButtonItem" destination="alc-I8-6Nt" id="koh-9Q-UVc"/>
+                        <outlet property="signInButtonItem" destination="cRP-mO-j3X" id="b6d-lR-Q1O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXy-C5-0nq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1183" y="-272"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="Tp7-fe-xS7">
+        <!--View Controller-->
+        <scene sceneID="AzU-c2-49k">
             <objects>
-                <tableViewController id="bVm-Fw-02b" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="48f-GQ-GlL">
+                <viewController id="h1e-ja-Wse" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ocv-bu-Lei"/>
+                        <viewControllerLayoutGuide type="bottom" id="PAl-KI-gK7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n28-aA-GsW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RAF-A1-mnw">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAF-A1-mnw" id="hXH-4C-9xT">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bVm-Fw-02b" id="cvT-R3-XUJ"/>
-                            <outlet property="delegate" destination="bVm-Fw-02b" id="g31-ce-GRe"/>
-                        </connections>
-                    </tableView>
+                    </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f7m-sE-mBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzY-Uz-aOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635" y="-266"/>
+            <point key="canvasLocation" x="1640" y="-272"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="l5r-tp-lUH">
@@ -191,7 +202,4 @@
             <point key="canvasLocation" x="617" y="725"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="rPf-TL-MFC"/>
-    </inferredMetricsTieBreakers>
 </document>
