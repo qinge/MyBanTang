@@ -22,18 +22,14 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var homePageCollectionView: UICollectionView!
     
     var hpcResuableView: HomePageCollectionReusableView!
-    
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "test"
         self.tabBarItem.title = "首页"
-        
-        if self.respondsToSelector("barHideOnSwipeGestureRecognizer") {
-            
-        }
-        
+
         self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.barHideOnSwipeGestureRecognizer.addTarget(self, action: "swipe")
         
@@ -43,6 +39,8 @@ class HomePageViewController: UIViewController {
         let collectionViewFlowLayout = homePageCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         collectionViewFlowLayout.sectionInset = UIEdgeInsetsMake(10, 5, 15, 5)
         homePageCollectionView.collectionViewLayout = collectionViewFlowLayout
+        
+        self.addRefreshControlToCollectionView()
     }
     
     func swipe(){
@@ -52,6 +50,23 @@ class HomePageViewController: UIViewController {
         }
     }
 
+    
+    func addRefreshControlToCollectionView() {
+        refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.grayColor()
+        refreshControl.addTarget(self, action: "refershControlAction", forControlEvents: .ValueChanged)
+        self.homePageCollectionView.addSubview(refreshControl)
+        self.homePageCollectionView.alwaysBounceVertical = true // 允许垂直反弹才能显示下拉刷新
+    }
+    
+    // MARK: - 有可能会循环引用
+    func refershControlAction(){
+        print("\(__FUNCTION__)")
+        let delayManager = DelayTaskManager()
+        delayManager.delay(2.0) { () -> () in
+            self.refreshControl.endRefreshing()
+        }
+    }
     
     override func prefersStatusBarHidden() -> Bool {
         return self.navigationController!.navigationBar.frame.origin.y < 0
