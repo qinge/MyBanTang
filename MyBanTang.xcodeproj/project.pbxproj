@@ -22,6 +22,7 @@
 		2553835D1C9FE8DF00612669 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */; };
 		2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835E1C9FE90C00612669 /* MainTabBarController.swift */; };
 		255383631C9FFACE00612669 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255383621C9FFACE00612669 /* Configuration.swift */; };
+		259C1C461CA2F01C00EABBAF /* app_JSON in Resources */ = {isa = PBXBuildFile; fileRef = 259C1C451CA2F01C00EABBAF /* app_JSON */; };
 		25FF7EC01CA10E60006D62A6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */; };
 		25FF7EC21CA10E86006D62A6 /* HomePageNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */; };
 		25FF7EC51CA1126E006D62A6 /* SquareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */; };
@@ -72,6 +73,7 @@
 		2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2553835E1C9FE90C00612669 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		255383621C9FFACE00612669 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		259C1C451CA2F01C00EABBAF /* app_JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app_JSON; sourceTree = "<group>"; };
 		25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageNavigationController.swift; sourceTree = "<group>"; };
 		25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareNavigationController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		255383601C9FFA7A00612669 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				259C1C431CA2EFAF00EABBAF /* JSON数据 */,
 				251C007F1CA2927C0024B10E /* Bridging */,
 				251C00741CA26EA60024B10E /* Tools */,
 				255383611C9FFA9500612669 /* config */,
@@ -225,6 +228,22 @@
 				255383621C9FFACE00612669 /* Configuration.swift */,
 			);
 			name = config;
+			sourceTree = "<group>";
+		};
+		259C1C431CA2EFAF00EABBAF /* JSON数据 */ = {
+			isa = PBXGroup;
+			children = (
+				259C1C441CA2EFF800EABBAF /* 最新 */,
+			);
+			name = "JSON数据";
+			sourceTree = "<group>";
+		};
+		259C1C441CA2EFF800EABBAF /* 最新 */ = {
+			isa = PBXGroup;
+			children = (
+				259C1C451CA2F01C00EABBAF /* app_JSON */,
+			);
+			name = "最新";
 			sourceTree = "<group>";
 		};
 		25FF7EBE1CA10E19006D62A6 /* HomePage */ = {
@@ -374,6 +393,7 @@
 			files = (
 				251D5AA21C9F9EC000C15F52 /* LaunchScreen.storyboard in Resources */,
 				251D5A9F1C9F9EC000C15F52 /* Assets.xcassets in Resources */,
+				259C1C461CA2F01C00EABBAF /* app_JSON in Resources */,
 				251D5A9D1C9F9EC000C15F52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
