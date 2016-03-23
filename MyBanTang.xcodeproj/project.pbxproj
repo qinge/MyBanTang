@@ -10,6 +10,8 @@
 		251C00711CA25C540024B10E /* HomePageCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251C00701CA25C540024B10E /* HomePageCollectionReusableView.swift */; };
 		251C00731CA2629B0024B10E /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251C00721CA2629B0024B10E /* HomeDetailViewController.swift */; };
 		251C00761CA26EC90024B10E /* DelayTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251C00751CA26EC90024B10E /* DelayTaskManager.swift */; };
+		251C007A1CA2828A0024B10E /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251C00791CA2828A0024B10E /* BannerView.swift */; };
+		251C00841CA294ED0024B10E /* ProductRecommed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251C00831CA294ED0024B10E /* ProductRecommed.swift */; };
 		251D5A981C9F9EC000C15F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D5A971C9F9EC000C15F52 /* AppDelegate.swift */; };
 		251D5A9A1C9F9EC000C15F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D5A991C9F9EC000C15F52 /* ViewController.swift */; };
 		251D5A9D1C9F9EC000C15F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251D5A9B1C9F9EC000C15F52 /* Main.storyboard */; };
@@ -51,6 +53,9 @@
 		251C00701CA25C540024B10E /* HomePageCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageCollectionReusableView.swift; sourceTree = "<group>"; };
 		251C00721CA2629B0024B10E /* HomeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		251C00751CA26EC90024B10E /* DelayTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayTaskManager.swift; sourceTree = "<group>"; };
+		251C00791CA2828A0024B10E /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		251C007B1CA292650024B10E /* MyBanTang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyBanTang-Bridging-Header.h"; sourceTree = "<group>"; };
+		251C00831CA294ED0024B10E /* ProductRecommed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRecommed.swift; sourceTree = "<group>"; };
 		251D5A941C9F9EC000C15F52 /* MyBanTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBanTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		251D5A971C9F9EC000C15F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		251D5A991C9F9EC000C15F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		251C006D1CA25BE00024B10E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				251C00831CA294ED0024B10E /* ProductRecommed.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				251C00701CA25C540024B10E /* HomePageCollectionReusableView.swift */,
+				251C00791CA2828A0024B10E /* BannerView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -132,6 +139,14 @@
 				251C00751CA26EC90024B10E /* DelayTaskManager.swift */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		251C007F1CA2927C0024B10E /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				251C007B1CA292650024B10E /* MyBanTang-Bridging-Header.h */,
+			);
+			name = Bridging;
 			sourceTree = "<group>";
 		};
 		251D5A8B1C9F9EC000C15F52 = {
@@ -197,6 +212,7 @@
 		255383601C9FFA7A00612669 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				251C007F1CA2927C0024B10E /* Bridging */,
 				251C00741CA26EA60024B10E /* Tools */,
 				255383611C9FFA9500612669 /* config */,
 			);
@@ -436,6 +452,8 @@
 				25FF7ECB1CA1380E006D62A6 /* BaseViewController.swift in Sources */,
 				255383631C9FFACE00612669 /* Configuration.swift in Sources */,
 				25FF7EC01CA10E60006D62A6 /* HomePageViewController.swift in Sources */,
+				251C00841CA294ED0024B10E /* ProductRecommed.swift in Sources */,
+				251C007A1CA2828A0024B10E /* BannerView.swift in Sources */,
 				25FF7EC21CA10E86006D62A6 /* HomePageNavigationController.swift in Sources */,
 				251D5A9A1C9F9EC000C15F52 /* ViewController.swift in Sources */,
 				2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */,
@@ -587,10 +605,13 @@
 			baseConfigurationReference = D74408E3D4D4F6248E0BDE24 /* Pods-MyBanTang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyBanTang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snqu.MyBanTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyBanTang/MyBanTang-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -599,10 +620,12 @@
 			baseConfigurationReference = 90A21F0F72B7ECFC9961E0DC /* Pods-MyBanTang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyBanTang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = snqu.MyBanTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyBanTang/MyBanTang-Bridging-Header.h";
 			};
 			name = Release;
 		};

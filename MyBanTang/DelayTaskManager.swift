@@ -63,6 +63,10 @@ class DelayTaskManager {
         task?(cancel: true)
     }
     
+    deinit {
+        print("hahah \(__FUNCTION__)")
+    }
+    
 }
 
 

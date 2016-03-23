@@ -59,7 +59,7 @@ class HomePageViewController: UIViewController {
         self.homePageCollectionView.alwaysBounceVertical = true // 允许垂直反弹才能显示下拉刷新
     }
     
-    // MARK: - 有可能会循环引用
+    // MARK: - 有可能会循环引用(测试发现没有循环引用)
     func refershControlAction(){
         print("\(__FUNCTION__)")
         let delayManager = DelayTaskManager()
@@ -87,6 +87,22 @@ class HomePageViewController: UIViewController {
     
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        let segueIdentifier = segue.identifier
+        if segueIdentifier == "HomeDetailViewControllerSegue" {
+            let homeDetailViewController = segue.destinationViewController
+            homeDetailViewController.hidesBottomBarWhenPushed = true
+        }
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.hidesBarsOnSwipe = false
+    }
+    
+}
+
+// MARK: - uitableViewDelegate
+
+extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDataSource
     
@@ -110,21 +126,8 @@ class HomePageViewController: UIViewController {
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.performSegueWithIdentifier("test", sender: self)
+        //        self.performSegueWithIdentifier("test", sender: self)
     }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        super.prepareForSegue(segue, sender: sender)
-        let segueIdentifier = segue.identifier
-        if segueIdentifier == "HomeDetailViewControllerSegue" {
-            let homeDetailViewController = segue.destinationViewController
-            homeDetailViewController.hidesBottomBarWhenPushed = true
-        }
-        self.navigationController?.navigationBarHidden = false
-        self.navigationController?.hidesBarsOnSwipe = false
-    }
-    
 }
 
 
