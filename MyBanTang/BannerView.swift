@@ -17,6 +17,7 @@ class BannerView: UIView, UIScrollViewDelegate {
     var bannerScrollView: UIScrollView!
     var bannerArray = [DailyBannerModel]()
     var timer: NSTimer!
+    let bannerWidth = SCREEN_WIDTH
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +26,8 @@ class BannerView: UIView, UIScrollViewDelegate {
         self.setUpData()
         
         self.createBannerView()
+        
+        startTimerForAutoScroll()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -51,22 +54,24 @@ class BannerView: UIView, UIScrollViewDelegate {
         
         bannerScrollView.addSubview(lastImageView)
         
-        //第一张放到 index = count 的位置
-        let xOfset = CGFloat(bannerArray.count + 1) * SCREEN_WIDTH
+        //第一张放到 index = count+1 的位置
+        let xOfset = CGFloat(bannerArray.count + 1) * bannerWidth
         let firstImageView = UIImageView(frame: CGRectMake(xOfset, 0, SCREEN_WIDTH, CGFloat(SCROLLVIEW_HEIGHT)))
         let firstModel = self.bannerArray[0]
         firstImageView.sd_setImageWithURL(NSURL(string: firstModel.imageUrl), placeholderImage: UIImage(named: "placeHolder.jpg"))
         
+        bannerScrollView.addSubview(firstImageView)
+        
         for var index = 0 ;index < self.bannerArray.count ;index++ {
             let bannerModel = self.bannerArray[index]
-            let imageView = UIImageView(frame: CGRectMake(SCREEN_WIDTH * CGFloat(index + 1), 0, SCREEN_WIDTH, CGFloat(SCROLLVIEW_HEIGHT)))
+            let imageView = UIImageView(frame: CGRectMake(bannerWidth * CGFloat(index + 1), 0, bannerWidth, CGFloat(SCROLLVIEW_HEIGHT)))
             
             imageView.sd_setImageWithURL(NSURL(string: bannerModel.imageUrl), placeholderImage:UIImage(named: "placeHolder.jpg"))
             bannerScrollView.addSubview(imageView)
         }
         
-        bannerScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*CGFloat(bannerArray.count+2), CGFloat(SCROLLVIEW_HEIGHT))
-        bannerScrollView.contentOffset = CGPointMake(SCREEN_WIDTH, 0)
+        bannerScrollView.contentSize = CGSizeMake(bannerWidth*CGFloat(bannerArray.count+2), CGFloat(SCROLLVIEW_HEIGHT))
+        bannerScrollView.contentOffset = CGPointMake(bannerWidth, 0)
         
         self.addSubview(bannerScrollView)
         
@@ -74,15 +79,37 @@ class BannerView: UIView, UIScrollViewDelegate {
     
     //开启timer
     func startTimerForAutoScroll() {
-        timer = NSTimer(timeInterval: 3.0, target: self, selector: "autoMaticScroll", userInfo: nil, repeats: true)
+        timer = NSTimer(timeInterval: 2.0, target: self, selector: "autoMaticScroll", userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
     }
     
     func autoMaticScroll() {
-        
+        // 滑动到最后一张
+        if bannerScrollView.contentOffset.x == CGFloat(bannerArray.count + 1) * bannerWidth {
+            bannerScrollView.contentOffset = CGPointMake(bannerWidth, 0)
+        }
+        bannerScrollView.setContentOffset(CGPointMake(bannerScrollView.contentOffset.x + bannerWidth, 0), animated: true)
     }
     
     // MARK: - UIScrollViewDelegate
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        timer.invalidate()
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        startTimerForAutoScroll()
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+//        let index = bannerScrollView.contentOffset.x / bannerWidth
+        if bannerScrollView.contentOffset.x == 0 {
+            // 如果当前页是第0页就跳转到数组中最后一个地方进行跳转
+            bannerScrollView.contentOffset = CGPointMake(CGFloat(bannerArray.count) * bannerWidth , 0)
+        }else if bannerScrollView.contentOffset.x == CGFloat(bannerArray.count + 1) * bannerWidth {
+             // 如果是 最后一页就跳转到数组第一个元素的地点
+            bannerScrollView.contentOffset = CGPointMake(bannerWidth, 0)
+        }
+    }
 
 }
 
