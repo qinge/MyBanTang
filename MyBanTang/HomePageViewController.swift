@@ -14,6 +14,7 @@ class HomePageViewController: UIViewController {
 //    @IBOutlet var tableView: UITableView!
     
     var shouldResetStateBar: Bool!
+    var shouldGetTitleView: Bool!
     
     @IBOutlet weak var signInButtonItem: UIBarButtonItem!
     
@@ -23,11 +24,12 @@ class HomePageViewController: UIViewController {
     
     var hpcResuableView: HomePageCollectionReusableView!
     var refreshControl: UIRefreshControl!
+    var titleView: HomeTitleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "test"
+        self.navigationItem.title = "首页物品"
         self.tabBarItem.title = "首页"
 
         self.navigationController?.hidesBarsOnSwipe = true
@@ -35,6 +37,7 @@ class HomePageViewController: UIViewController {
         
         
         shouldResetStateBar = false
+        shouldGetTitleView = true
         
         let collectionViewFlowLayout = homePageCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         collectionViewFlowLayout.sectionInset = UIEdgeInsetsMake(10, 5, 15, 5)
@@ -98,6 +101,27 @@ class HomePageViewController: UIViewController {
         self.navigationController?.hidesBarsOnSwipe = false
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y >= BANNER_VIEW_HEIGHT && shouldGetTitleView == true {
+            shouldGetTitleView = false
+            titleView = hpcResuableView.getTitleViewFromReusableView()
+            titleView.removeFromSuperview()
+            var titleViewFrame = titleView.frame
+            titleViewFrame.origin = CGPointMake(0, 0)
+            titleView.frame = titleViewFrame
+            titleView.tag = TITME_VIEW_TAG
+            self.view.addSubview(titleView)
+        }else if scrollView.contentOffset.y < BANNER_VIEW_HEIGHT &&  shouldGetTitleView == false {
+            shouldGetTitleView = true
+            titleView.removeFromSuperview()
+            var titleViewFrame = titleView.frame
+            titleViewFrame.origin = CGPointMake(0, BANNER_VIEW_HEIGHT)
+            titleView.frame = titleViewFrame
+            titleView.tag = TITME_VIEW_TAG
+            hpcResuableView.addSubview(titleView)
+        }
+    }
+    
 }
 
 // MARK: - uitableViewDelegate
@@ -142,13 +166,13 @@ extension HomePageViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 60
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.orangeColor()
+        
         return cell
         
     }
