@@ -15,6 +15,7 @@ let TYPE_VIEW_HEIGHT = 50.0
 class BannerView: UIView, UIScrollViewDelegate {
     
     var bannerScrollView: UIScrollView!
+    var pageControl: UIPageControl!
     var bannerArray = [DailyBannerModel]()
     var timer: NSTimer!
     let bannerWidth = SCREEN_WIDTH
@@ -75,6 +76,19 @@ class BannerView: UIView, UIScrollViewDelegate {
         
         self.addSubview(bannerScrollView)
         
+        // 添加 page controll 
+        pageControl = UIPageControl()
+        pageControl.numberOfPages = bannerArray.count
+        let size = pageControl.sizeForNumberOfPages(bannerArray.count)
+        pageControl.frame = CGRectMake(0, 140, size.width, 6)
+        pageControl.center = CGPointMake(bannerWidth / 2, pageControl.center.y)
+        pageControl.pageIndicatorTintColor = UIColor(red: 228/255.0, green: 228/255.0, blue: 228/255.0, alpha: 1.0)
+        pageControl.currentPageIndicatorTintColor = UIColor(red: 253/255.0, green: 99/255.0, blue: 99/255.0, alpha: 1.0)
+        pageControl.userInteractionEnabled = false
+        pageControl.currentPage = 0
+//        pageControl.layer.zPosition = 2
+        self.addSubview(pageControl)
+        
     }
     
     //开启timer
@@ -84,10 +98,19 @@ class BannerView: UIView, UIScrollViewDelegate {
     }
     
     func autoMaticScroll() {
-        // 滑动到最后一张
+        pageControl.currentPage = pageControl.currentPage + 1
+        
+        // 滑动到虚拟的最后一张(第一页)
         if bannerScrollView.contentOffset.x == CGFloat(bannerArray.count + 1) * bannerWidth {
             bannerScrollView.contentOffset = CGPointMake(bannerWidth, 0)
+            
         }
+        
+        // page controll 跟 scrollview 的 contentOffset 的设置 需要分开判断 因为 page control 在这里是提前设置的(比设置 setContentOffset 早)
+        if bannerScrollView.contentOffset.x == CGFloat(bannerArray.count) * bannerWidth {
+            pageControl.currentPage = 0
+        }
+        
         bannerScrollView.setContentOffset(CGPointMake(bannerScrollView.contentOffset.x + bannerWidth, 0), animated: true)
     }
     
@@ -101,13 +124,16 @@ class BannerView: UIView, UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-//        let index = bannerScrollView.contentOffset.x / bannerWidth
+        let page = Int( (bannerScrollView.contentOffset.x - bannerWidth) / bannerWidth)
+        pageControl.currentPage = page
         if bannerScrollView.contentOffset.x == 0 {
             // 如果当前页是第0页就跳转到数组中最后一个地方进行跳转
             bannerScrollView.contentOffset = CGPointMake(CGFloat(bannerArray.count) * bannerWidth , 0)
+            pageControl.currentPage = bannerArray.count - 1
         }else if bannerScrollView.contentOffset.x == CGFloat(bannerArray.count + 1) * bannerWidth {
              // 如果是 最后一页就跳转到数组第一个元素的地点
             bannerScrollView.contentOffset = CGPointMake(bannerWidth, 0)
+            pageControl.currentPage = 0
         }
     }
 
