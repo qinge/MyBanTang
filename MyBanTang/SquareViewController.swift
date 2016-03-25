@@ -10,9 +10,12 @@ import UIKit
 
 class SquareViewController: UIViewController {
     
+    private var segmentView = MySegment()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "广场"
+        
     }
 
 }

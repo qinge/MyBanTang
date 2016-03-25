@@ -25,6 +25,7 @@
 		2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835E1C9FE90C00612669 /* MainTabBarController.swift */; };
 		255383631C9FFACE00612669 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255383621C9FFACE00612669 /* Configuration.swift */; };
 		259C1C461CA2F01C00EABBAF /* app_JSON in Resources */ = {isa = PBXBuildFile; fileRef = 259C1C451CA2F01C00EABBAF /* app_JSON */; };
+		25FEF6BB1CA4ED1600CB7F9D /* MySegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FEF6BA1CA4ED1600CB7F9D /* MySegment.swift */; };
 		25FF7EC01CA10E60006D62A6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */; };
 		25FF7EC21CA10E86006D62A6 /* HomePageNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */; };
 		25FF7EC51CA1126E006D62A6 /* SquareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */; };
@@ -78,6 +79,7 @@
 		2553835E1C9FE90C00612669 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		255383621C9FFACE00612669 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		259C1C451CA2F01C00EABBAF /* app_JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app_JSON; sourceTree = "<group>"; };
+		25FEF6BA1CA4ED1600CB7F9D /* MySegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySegment.swift; sourceTree = "<group>"; };
 		25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageNavigationController.swift; sourceTree = "<group>"; };
 		25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareNavigationController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,28 @@
 			name = "最新";
 			sourceTree = "<group>";
 		};
+		25FEF6B71CA4EC1400CB7F9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25FEF6BA1CA4ED1600CB7F9D /* MySegment.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		25FEF6B81CA4EC2200CB7F9D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		25FEF6B91CA4EC3800CB7F9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		25FF7EBE1CA10E19006D62A6 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +291,9 @@
 		25FF7EC31CA1123C006D62A6 /* Square */ = {
 			isa = PBXGroup;
 			children = (
+				25FEF6B91CA4EC3800CB7F9D /* Model */,
+				25FEF6B81CA4EC2200CB7F9D /* ViewControllers */,
+				25FEF6B71CA4EC1400CB7F9D /* Views */,
 				25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */,
 				25FF7EC61CA1128A006D62A6 /* SquareViewController.swift */,
 			);
@@ -485,6 +512,7 @@
 				251D5A9A1C9F9EC000C15F52 /* ViewController.swift in Sources */,
 				2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */,
 				251D5A981C9F9EC000C15F52 /* AppDelegate.swift in Sources */,
+				25FEF6BB1CA4ED1600CB7F9D /* MySegment.swift in Sources */,
 				251790AC1CA3BF4600FF04F7 /* HomeTitleView.swift in Sources */,
 				25FF7EC91CA137D7006D62A6 /* BaseNavigationController.swift in Sources */,
 				25FF7EC71CA1128A006D62A6 /* SquareViewController.swift in Sources */,
