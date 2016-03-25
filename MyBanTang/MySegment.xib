@@ -1,15 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MySegment" customModule="MyBanTang" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-9d-mWV">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="fcH-F2-HQB"/>
+                    </constraints>
+                    <state key="normal" title="广场"/>
+                    <connections>
+                        <action selector="squareButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="zvX-lw-8Of"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anr-xQ-awF">
+                    <rect key="frame" x="50" y="0.0" width="50" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="VsU-QD-zxW"/>
+                    </constraints>
+                    <state key="normal" title="关注"/>
+                    <connections>
+                        <action selector="instrestButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="oqb-8d-lH0"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTa-FS-E5h">
+                    <rect key="frame" x="49" y="10" width="1" height="24"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="DTf-EE-7ze"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.63894209369999999" green="0.8598760124" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cAe-9d-mWV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6Wb-kX-2gp"/>
+                <constraint firstItem="WTa-FS-E5h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Oh4-cS-9wM"/>
+                <constraint firstItem="WTa-FS-E5h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QFE-HZ-Xre"/>
+                <constraint firstAttribute="bottom" secondItem="WTa-FS-E5h" secondAttribute="bottom" constant="10" id="a4q-lA-dnc"/>
+                <constraint firstItem="anr-xQ-awF" firstAttribute="leading" secondItem="WTa-FS-E5h" secondAttribute="trailing" id="ecx-CA-rNd"/>
+                <constraint firstAttribute="trailing" secondItem="anr-xQ-awF" secondAttribute="trailing" id="ghu-Q9-Eig"/>
+                <constraint firstAttribute="bottom" secondItem="anr-xQ-awF" secondAttribute="bottom" id="mXj-0G-Igk"/>
+                <constraint firstItem="anr-xQ-awF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ocf-nb-USA"/>
+                <constraint firstItem="WTa-FS-E5h" firstAttribute="leading" secondItem="cAe-9d-mWV" secondAttribute="trailing" constant="-1" id="t0z-lc-fHS"/>
+                <constraint firstAttribute="bottom" secondItem="cAe-9d-mWV" secondAttribute="bottom" id="xy4-eg-WVc"/>
+                <constraint firstItem="cAe-9d-mWV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yVH-xk-0ha"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="yVH-xk-0ha"/>
+                    <exclude reference="ghu-Q9-Eig"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="548" y="238"/>
         </view>
     </objects>
 </document>

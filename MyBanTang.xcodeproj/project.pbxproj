@@ -26,6 +26,13 @@
 		255383631C9FFACE00612669 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255383621C9FFACE00612669 /* Configuration.swift */; };
 		259C1C461CA2F01C00EABBAF /* app_JSON in Resources */ = {isa = PBXBuildFile; fileRef = 259C1C451CA2F01C00EABBAF /* app_JSON */; };
 		25FEF6BB1CA4ED1600CB7F9D /* MySegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FEF6BA1CA4ED1600CB7F9D /* MySegment.swift */; };
+		25FEF6BD1CA5053E00CB7F9D /* PlantGrassTeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FEF6BC1CA5053E00CB7F9D /* PlantGrassTeamModel.swift */; };
+		25FEF6C21CA5085400CB7F9D /* SearchListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FEF6C11CA5085400CB7F9D /* SearchListModel.swift */; };
+		25FEF6C51CA508AE00CB7F9D /* 搜索清单 in Resources */ = {isa = PBXBuildFile; fileRef = 25FEF6C41CA508AE00CB7F9D /* 搜索清单 */; };
+		25FEF6C81CA508E600CB7F9D /* 种草小分队 in Resources */ = {isa = PBXBuildFile; fileRef = 25FEF6C71CA508E600CB7F9D /* 种草小分队 */; };
+		25FEF6CA1CA5096500CB7F9D /* SquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FEF6C91CA5096500CB7F9D /* SquareModel.swift */; };
+		25FEF6CD1CA509A000CB7F9D /* 广场 in Resources */ = {isa = PBXBuildFile; fileRef = 25FEF6CC1CA509A000CB7F9D /* 广场 */; };
+		25FEF6CF1CA518D700CB7F9D /* MySegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FEF6CE1CA518D700CB7F9D /* MySegment.xib */; };
 		25FF7EC01CA10E60006D62A6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */; };
 		25FF7EC21CA10E86006D62A6 /* HomePageNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */; };
 		25FF7EC51CA1126E006D62A6 /* SquareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */; };
@@ -80,6 +87,13 @@
 		255383621C9FFACE00612669 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		259C1C451CA2F01C00EABBAF /* app_JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app_JSON; sourceTree = "<group>"; };
 		25FEF6BA1CA4ED1600CB7F9D /* MySegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySegment.swift; sourceTree = "<group>"; };
+		25FEF6BC1CA5053E00CB7F9D /* PlantGrassTeamModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantGrassTeamModel.swift; sourceTree = "<group>"; };
+		25FEF6C11CA5085400CB7F9D /* SearchListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListModel.swift; sourceTree = "<group>"; };
+		25FEF6C41CA508AE00CB7F9D /* 搜索清单 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "搜索清单"; sourceTree = "<group>"; };
+		25FEF6C71CA508E600CB7F9D /* 种草小分队 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "种草小分队"; sourceTree = "<group>"; };
+		25FEF6C91CA5096500CB7F9D /* SquareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareModel.swift; sourceTree = "<group>"; };
+		25FEF6CC1CA509A000CB7F9D /* 广场 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "广场"; sourceTree = "<group>"; };
+		25FEF6CE1CA518D700CB7F9D /* MySegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySegment.xib; sourceTree = "<group>"; };
 		25FF7EBF1CA10E60006D62A6 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		25FF7EC11CA10E86006D62A6 /* HomePageNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageNavigationController.swift; sourceTree = "<group>"; };
 		25FF7EC41CA1126E006D62A6 /* SquareNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareNavigationController.swift; sourceTree = "<group>"; };
@@ -184,6 +198,9 @@
 		251D5A961C9F9EC000C15F52 /* MyBanTang */ = {
 			isa = PBXGroup;
 			children = (
+				25FEF6C01CA507F900CB7F9D /* GlobalModel */,
+				25FEF6BF1CA507F100CB7F9D /* GlobalView */,
+				25FEF6BE1CA507D300CB7F9D /* GlobalViewController */,
 				25FF7EBE1CA10E19006D62A6 /* HomePage */,
 				25FF7EC31CA1123C006D62A6 /* Square */,
 				255383601C9FFA7A00612669 /* SupportFiles */,
@@ -193,10 +210,6 @@
 				251D5A9E1C9F9EC000C15F52 /* Assets.xcassets */,
 				251D5AA01C9F9EC000C15F52 /* LaunchScreen.storyboard */,
 				251D5AA31C9F9EC000C15F52 /* Info.plist */,
-				2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */,
-				2553835E1C9FE90C00612669 /* MainTabBarController.swift */,
-				25FF7EC81CA137D7006D62A6 /* BaseNavigationController.swift */,
-				25FF7ECA1CA1380E006D62A6 /* BaseViewController.swift */,
 			);
 			path = MyBanTang;
 			sourceTree = "<group>";
@@ -241,6 +254,9 @@
 		259C1C431CA2EFAF00EABBAF /* JSON数据 */ = {
 			isa = PBXGroup;
 			children = (
+				25FEF6CB1CA5099600CB7F9D /* 广场 */,
+				25FEF6C61CA508C700CB7F9D /* 种草小分队 */,
+				25FEF6C31CA5089F00CB7F9D /* 搜索列表 */,
 				259C1C441CA2EFF800EABBAF /* 最新 */,
 			);
 			name = "JSON数据";
@@ -258,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				25FEF6BA1CA4ED1600CB7F9D /* MySegment.swift */,
+				25FEF6CE1CA518D700CB7F9D /* MySegment.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -272,8 +289,60 @@
 		25FEF6B91CA4EC3800CB7F9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				25FEF6BC1CA5053E00CB7F9D /* PlantGrassTeamModel.swift */,
+				25FEF6C91CA5096500CB7F9D /* SquareModel.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		25FEF6BE1CA507D300CB7F9D /* GlobalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */,
+				2553835E1C9FE90C00612669 /* MainTabBarController.swift */,
+				25FF7EC81CA137D7006D62A6 /* BaseNavigationController.swift */,
+				25FF7ECA1CA1380E006D62A6 /* BaseViewController.swift */,
+			);
+			name = GlobalViewController;
+			sourceTree = "<group>";
+		};
+		25FEF6BF1CA507F100CB7F9D /* GlobalView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GlobalView;
+			sourceTree = "<group>";
+		};
+		25FEF6C01CA507F900CB7F9D /* GlobalModel */ = {
+			isa = PBXGroup;
+			children = (
+				25FEF6C11CA5085400CB7F9D /* SearchListModel.swift */,
+			);
+			name = GlobalModel;
+			sourceTree = "<group>";
+		};
+		25FEF6C31CA5089F00CB7F9D /* 搜索列表 */ = {
+			isa = PBXGroup;
+			children = (
+				25FEF6C41CA508AE00CB7F9D /* 搜索清单 */,
+			);
+			name = "搜索列表";
+			sourceTree = "<group>";
+		};
+		25FEF6C61CA508C700CB7F9D /* 种草小分队 */ = {
+			isa = PBXGroup;
+			children = (
+				25FEF6C71CA508E600CB7F9D /* 种草小分队 */,
+			);
+			name = "种草小分队";
+			sourceTree = "<group>";
+		};
+		25FEF6CB1CA5099600CB7F9D /* 广场 */ = {
+			isa = PBXGroup;
+			children = (
+				25FEF6CC1CA509A000CB7F9D /* 广场 */,
+			);
+			name = "广场";
 			sourceTree = "<group>";
 		};
 		25FF7EBE1CA10E19006D62A6 /* HomePage */ = {
@@ -425,9 +494,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				251D5AA21C9F9EC000C15F52 /* LaunchScreen.storyboard in Resources */,
+				25FEF6CD1CA509A000CB7F9D /* 广场 in Resources */,
 				251D5A9F1C9F9EC000C15F52 /* Assets.xcassets in Resources */,
 				259C1C461CA2F01C00EABBAF /* app_JSON in Resources */,
+				25FEF6C81CA508E600CB7F9D /* 种草小分队 in Resources */,
 				251D5A9D1C9F9EC000C15F52 /* Main.storyboard in Resources */,
+				25FEF6C51CA508AE00CB7F9D /* 搜索清单 in Resources */,
+				25FEF6CF1CA518D700CB7F9D /* MySegment.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,12 +576,15 @@
 				25FF7EC51CA1126E006D62A6 /* SquareNavigationController.swift in Sources */,
 				2553835D1C9FE8DF00612669 /* WelcomeViewController.swift in Sources */,
 				25FF7ECB1CA1380E006D62A6 /* BaseViewController.swift in Sources */,
+				25FEF6BD1CA5053E00CB7F9D /* PlantGrassTeamModel.swift in Sources */,
 				255383631C9FFACE00612669 /* Configuration.swift in Sources */,
 				25FF7EC01CA10E60006D62A6 /* HomePageViewController.swift in Sources */,
 				251790AE1CA3DD0100FF04F7 /* HomeCollectionViewCell.swift in Sources */,
 				251C00841CA294ED0024B10E /* ProductRecommed.swift in Sources */,
+				25FEF6CA1CA5096500CB7F9D /* SquareModel.swift in Sources */,
 				251C007A1CA2828A0024B10E /* BannerView.swift in Sources */,
 				25FF7EC21CA10E86006D62A6 /* HomePageNavigationController.swift in Sources */,
+				25FEF6C21CA5085400CB7F9D /* SearchListModel.swift in Sources */,
 				251D5A9A1C9F9EC000C15F52 /* ViewController.swift in Sources */,
 				2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */,
 				251D5A981C9F9EC000C15F52 /* AppDelegate.swift in Sources */,
