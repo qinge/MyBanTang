@@ -8,16 +8,14 @@
 
 import UIKit
 
-class SquareViewController: UIViewController {
+class SquareViewController: UIViewController, MySegmentButtonClickProtocol, UICollectionViewDataSource, UICollectionViewDelegate {
     
     private var segmentView: MySegment!
     
-    // 各个分类显示的 collectionView
-    private var showCollectionView: UICollectionView?
-    
     // 种草小分队
-    private var plantGrassTeamView: UICollectionView?
+    @IBOutlet var collectionView: UICollectionView!
     
+    var squareReusableHeadView: SquareCollectionReusableView!
     
     //model
     private var teamModel: [PlantGrassTeamModel]?
@@ -35,6 +33,7 @@ class SquareViewController: UIViewController {
         
         self.buildBarButtonItem()
         
+        self.view.setNeedsLayout()
     }
 
     
@@ -46,7 +45,7 @@ class SquareViewController: UIViewController {
     
     
     func buildBarButtonItem() {
-        let nibs = NSBundle.mainBundle().loadNibNamed("MySegment", owner: self, options: nil)
+        let nibs = NSBundle.mainBundle().loadNibNamed("MySegment", owner: nil, options: nil)
         if let sv = nibs[0] as? MySegment {
             segmentView = sv
         }
@@ -59,4 +58,46 @@ class SquareViewController: UIViewController {
     
     @IBAction func addFriend(sender: UIBarButtonItem) {
     }
+    
+    
+    // MARK: - MySegmentButtonClickProtocol
+    
+    func didCheckSquareButton() {
+        
+    }
+    
+    
+    func didCheckInstrestButton() {
+        
+    }
+
+    // MARK: - UICollectionViewDataSource
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SquareCollectionViewCell", forIndexPath: indexPath)
+        
+        cell.backgroundColor = UIColor.orangeColor()
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionElementKindSectionHeader{
+            squareReusableHeadView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "SquareCollectionReusableView", forIndexPath: indexPath) as! SquareCollectionReusableView
+        }
+        return squareReusableHeadView
+        
+    }
+    
+    
+    // MARK: - UICollectionViewDelegate
+    
 }

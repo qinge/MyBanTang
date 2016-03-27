@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.delegate = self
         changeNavigationBarTintColor()
     }
 
@@ -52,5 +52,16 @@ class MainTabBarController: UITabBarController {
         self.tabBar.translucent = false
     }
     
+    
+    // MARK: - UITabBarControllerDelegate
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        guard viewController.isMemberOfClass(ShowNavigationController) else {
+            return true
+        }
+        let showNavigationController = viewController as! ShowNavigationController
+        let showViewController = showNavigationController.topViewController as! ShowViewController
+        showViewController.showMyPhote()
+        return false
+    }
 
 }
