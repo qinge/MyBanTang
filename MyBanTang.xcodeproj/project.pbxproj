@@ -305,6 +305,24 @@
 			name = config;
 			sourceTree = "<group>";
 		};
+		256AB27F1CA923E700A8CC6C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		256AB2801CA9240C00A8CC6C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */,
+				2553835E1C9FE90C00612669 /* MainTabBarController.swift */,
+				25FF7EC81CA137D7006D62A6 /* BaseNavigationController.swift */,
+				25FF7ECA1CA1380E006D62A6 /* BaseViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		259C1C431CA2EFAF00EABBAF /* JSON数据 */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,10 +372,8 @@
 		25FEF6BE1CA507D300CB7F9D /* GlobalViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */,
-				2553835E1C9FE90C00612669 /* MainTabBarController.swift */,
-				25FF7EC81CA137D7006D62A6 /* BaseNavigationController.swift */,
-				25FF7ECA1CA1380E006D62A6 /* BaseViewController.swift */,
+				256AB2801CA9240C00A8CC6C /* Base */,
+				256AB27F1CA923E700A8CC6C /* Search */,
 			);
 			name = GlobalViewController;
 			sourceTree = "<group>";

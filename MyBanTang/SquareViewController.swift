@@ -54,9 +54,11 @@ class SquareViewController: UIViewController, MySegmentButtonClickProtocol, UICo
     
     
     @IBAction func searchFriend(sender: UIBarButtonItem) {
+        
     }
     
     @IBAction func addFriend(sender: UIBarButtonItem) {
+        
     }
     
     
