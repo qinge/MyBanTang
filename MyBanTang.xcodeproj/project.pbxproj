@@ -23,10 +23,13 @@
 		251D5AB81C9F9EC000C15F52 /* MyBanTangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D5AB71C9F9EC000C15F52 /* MyBanTangUITests.swift */; };
 		254F04321CA6D72A006D28B4 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F04311CA6D72A006D28B4 /* ShowViewController.swift */; };
 		254F04341CA6D748006D28B4 /* ShowNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F04331CA6D748006D28B4 /* ShowNavigationController.swift */; };
-		254F04391CA6DD1B006D28B4 /* ShowMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F04381CA6DD1B006D28B4 /* ShowMeViewController.swift */; };
 		2553835D1C9FE8DF00612669 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */; };
 		2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553835E1C9FE90C00612669 /* MainTabBarController.swift */; };
 		255383631C9FFACE00612669 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255383621C9FFACE00612669 /* Configuration.swift */; };
+		256AB2781CA8F88F00A8CC6C /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256AB2771CA8F88F00A8CC6C /* Photos.framework */; };
+		256AB27A1CA9043100A8CC6C /* ShowMeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256AB2791CA9043100A8CC6C /* ShowMeCollectionViewCell.swift */; };
+		256AB27C1CA9136700A8CC6C /* ShowMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256AB27B1CA9136700A8CC6C /* ShowMeViewController.swift */; };
+		256AB27E1CA915F000A8CC6C /* ShowMeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256AB27D1CA915F000A8CC6C /* ShowMeNavigationController.swift */; };
 		2570B3F81CA663C900B719C0 /* SquareCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2570B3F71CA663C900B719C0 /* SquareCollectionViewCell.swift */; };
 		2570B3FA1CA663F700B719C0 /* SquareCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2570B3F91CA663F700B719C0 /* SquareCollectionReusableView.swift */; };
 		259C1C461CA2F01C00EABBAF /* app_JSON in Resources */ = {isa = PBXBuildFile; fileRef = 259C1C451CA2F01C00EABBAF /* app_JSON */; };
@@ -89,10 +92,13 @@
 		251D5AB91C9F9EC000C15F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		254F04311CA6D72A006D28B4 /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		254F04331CA6D748006D28B4 /* ShowNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNavigationController.swift; sourceTree = "<group>"; };
-		254F04381CA6DD1B006D28B4 /* ShowMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMeViewController.swift; sourceTree = "<group>"; };
 		2553835C1C9FE8DF00612669 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2553835E1C9FE90C00612669 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		255383621C9FFACE00612669 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		256AB2771CA8F88F00A8CC6C /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		256AB2791CA9043100A8CC6C /* ShowMeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMeCollectionViewCell.swift; sourceTree = "<group>"; };
+		256AB27B1CA9136700A8CC6C /* ShowMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMeViewController.swift; sourceTree = "<group>"; };
+		256AB27D1CA915F000A8CC6C /* ShowMeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMeNavigationController.swift; sourceTree = "<group>"; };
 		2570B3F71CA663C900B719C0 /* SquareCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareCollectionViewCell.swift; sourceTree = "<group>"; };
 		2570B3F91CA663F700B719C0 /* SquareCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareCollectionReusableView.swift; sourceTree = "<group>"; };
 		259C1C451CA2F01C00EABBAF /* app_JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app_JSON; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256AB2781CA8F88F00A8CC6C /* Photos.framework in Frameworks */,
 				78494980890354386070456A /* libPods-MyBanTang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +265,8 @@
 		254F04351CA6DCE3006D28B4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				254F04381CA6DD1B006D28B4 /* ShowMeViewController.swift */,
+				256AB27D1CA915F000A8CC6C /* ShowMeNavigationController.swift */,
+				256AB27B1CA9136700A8CC6C /* ShowMeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 		254F04361CA6DCEC006D28B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				256AB2791CA9043100A8CC6C /* ShowMeCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 		D9EB42BD433702B722407977 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				256AB2771CA8F88F00A8CC6C /* Photos.framework */,
 				12CE044BDFE4E0FBA02F03E0 /* libPods-MyBanTang.a */,
 			);
 			name = Frameworks;
@@ -623,20 +633,22 @@
 				25FF7EC51CA1126E006D62A6 /* SquareNavigationController.swift in Sources */,
 				2553835D1C9FE8DF00612669 /* WelcomeViewController.swift in Sources */,
 				25FF7ECB1CA1380E006D62A6 /* BaseViewController.swift in Sources */,
+				256AB27C1CA9136700A8CC6C /* ShowMeViewController.swift in Sources */,
 				25FEF6BD1CA5053E00CB7F9D /* PlantGrassTeamModel.swift in Sources */,
 				255383631C9FFACE00612669 /* Configuration.swift in Sources */,
 				25FF7EC01CA10E60006D62A6 /* HomePageViewController.swift in Sources */,
 				251790AE1CA3DD0100FF04F7 /* HomeCollectionViewCell.swift in Sources */,
+				256AB27A1CA9043100A8CC6C /* ShowMeCollectionViewCell.swift in Sources */,
 				251C00841CA294ED0024B10E /* ProductRecommed.swift in Sources */,
 				254F04341CA6D748006D28B4 /* ShowNavigationController.swift in Sources */,
 				2570B3FA1CA663F700B719C0 /* SquareCollectionReusableView.swift in Sources */,
 				254F04321CA6D72A006D28B4 /* ShowViewController.swift in Sources */,
 				25FEF6CA1CA5096500CB7F9D /* SquareModel.swift in Sources */,
+				256AB27E1CA915F000A8CC6C /* ShowMeNavigationController.swift in Sources */,
 				251C007A1CA2828A0024B10E /* BannerView.swift in Sources */,
 				25FF7EC21CA10E86006D62A6 /* HomePageNavigationController.swift in Sources */,
 				25FEF6C21CA5085400CB7F9D /* SearchListModel.swift in Sources */,
 				251D5A9A1C9F9EC000C15F52 /* ViewController.swift in Sources */,
-				254F04391CA6DD1B006D28B4 /* ShowMeViewController.swift in Sources */,
 				2553835F1C9FE90C00612669 /* MainTabBarController.swift in Sources */,
 				251D5A981C9F9EC000C15F52 /* AppDelegate.swift in Sources */,
 				25FEF6BB1CA4ED1600CB7F9D /* MySegment.swift in Sources */,

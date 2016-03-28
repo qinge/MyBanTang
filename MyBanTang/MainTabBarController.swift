@@ -55,12 +55,12 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     // MARK: - UITabBarControllerDelegate
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
-        guard viewController.isMemberOfClass(ShowNavigationController) else {
+        guard  viewController.isMemberOfClass(ShowNavigationController) else {
             return true
         }
         let showNavigationController = viewController as! ShowNavigationController
         let showViewController = showNavigationController.topViewController as! ShowViewController
-        showViewController.showMyPhote()
+        showViewController.openPhotoViewController()
         return false
     }
 
