@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -43,53 +43,60 @@
                                     <constraint firstAttribute="height" constant="45" id="xpv-z3-n2u"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="me6-99-DbC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flm-42-Oud">
                                 <rect key="frame" x="0.0" y="109" width="320" height="459"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JEY-T2-qed">
-                                    <size key="itemSize" width="300" height="114"/>
-                                    <size key="headerReferenceSize" width="50" height="270"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="20"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SquareCollectionViewCell" reuseIdentifier="SquareCollectionViewCell" id="dnq-cm-5C9" customClass="SquareCollectionViewCell" customModule="MyBanTang" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="280" width="300" height="114"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="114"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="me6-99-DbC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="459"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JEY-T2-qed">
+                                            <size key="itemSize" width="300" height="114"/>
+                                            <size key="headerReferenceSize" width="50" height="270"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="20"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SquareCollectionViewCell" reuseIdentifier="SquareCollectionViewCell" id="dnq-cm-5C9" customClass="SquareCollectionViewCell" customModule="MyBanTang" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="280" width="300" height="114"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="114"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SquareCollectionReusableView" id="pRH-Wl-zon" customClass="SquareCollectionReusableView" customModule="MyBanTang" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SquareCollectionReusableView" id="pRH-Wl-zon" customClass="SquareCollectionReusableView" customModule="MyBanTang" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" red="0.53827026113362875" green="0.87745302239848155" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </collectionReusableView>
-                                <connections>
-                                    <outlet property="dataSource" destination="ldV-Fp-x36" id="65J-pD-xU6"/>
-                                    <outlet property="delegate" destination="ldV-Fp-x36" id="EPO-x0-Fgb"/>
-                                </connections>
-                            </collectionView>
+                                            <color key="backgroundColor" red="0.53827026113362875" green="0.87745302239848155" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </collectionReusableView>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ldV-Fp-x36" id="65J-pD-xU6"/>
+                                            <outlet property="delegate" destination="ldV-Fp-x36" id="EPO-x0-Fgb"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="me6-99-DbC" secondAttribute="trailing" id="1lz-dM-7Ib"/>
+                                    <constraint firstAttribute="bottom" secondItem="me6-99-DbC" secondAttribute="bottom" id="9f1-Zl-66U"/>
+                                    <constraint firstAttribute="height" constant="459" id="Jbo-SA-ktn"/>
+                                    <constraint firstItem="me6-99-DbC" firstAttribute="top" secondItem="flm-42-Oud" secondAttribute="top" id="cel-qd-l7F"/>
+                                    <constraint firstItem="me6-99-DbC" firstAttribute="leading" secondItem="flm-42-Oud" secondAttribute="leading" id="oaJ-cV-EEy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="me6-99-DbC" firstAttribute="top" secondItem="UAH-NT-tAt" secondAttribute="top" id="0hZ-bI-rA6"/>
+                            <constraint firstAttribute="trailing" secondItem="flm-42-Oud" secondAttribute="trailing" id="7bl-ac-KG8"/>
+                            <constraint firstItem="flm-42-Oud" firstAttribute="leading" secondItem="UAH-NT-tAt" secondAttribute="leading" id="Cuf-yw-54t"/>
                             <constraint firstItem="CVX-hc-N4G" firstAttribute="leading" secondItem="UAH-NT-tAt" secondAttribute="leading" id="LYc-u6-mhA"/>
-                            <constraint firstAttribute="trailing" secondItem="me6-99-DbC" secondAttribute="trailing" id="SPv-cd-Zvs"/>
+                            <constraint firstItem="flm-42-Oud" firstAttribute="top" secondItem="CVX-hc-N4G" secondAttribute="bottom" id="MTo-he-yr4"/>
+                            <constraint firstAttribute="bottom" secondItem="flm-42-Oud" secondAttribute="bottom" priority="750" id="QwW-ZI-qgM"/>
                             <constraint firstAttribute="trailing" secondItem="CVX-hc-N4G" secondAttribute="trailing" id="fCF-Rh-33Q"/>
                             <constraint firstItem="CVX-hc-N4G" firstAttribute="top" secondItem="1Gk-dR-vVc" secondAttribute="bottom" id="lNs-XR-VBC"/>
-                            <constraint firstAttribute="bottom" secondItem="me6-99-DbC" secondAttribute="bottom" id="miG-PI-Cns"/>
-                            <constraint firstItem="me6-99-DbC" firstAttribute="leading" secondItem="UAH-NT-tAt" secondAttribute="leading" id="se2-0f-NHB"/>
-                            <constraint firstItem="me6-99-DbC" firstAttribute="top" secondItem="CVX-hc-N4G" secondAttribute="bottom" id="z9R-Xn-WRm"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="0hZ-bI-rA6"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="square" id="bCv-Cn-tg1">
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="8iS-UX-NlH">
@@ -105,6 +112,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="me6-99-DbC" id="uaY-v5-wjI"/>
+                        <outlet property="heightConstraint" destination="Jbo-SA-ktn" id="s4j-s4-3d6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83e-7v-vH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -221,16 +229,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzY-Uz-aOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1640" y="-272"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="l5r-tp-lUH">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="vze-ou-Fpy" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Blz-F1-BS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-193" y="-887"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="1ZT-Ve-ffx">

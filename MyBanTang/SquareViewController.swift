@@ -11,6 +11,7 @@ import UIKit
 class SquareViewController: UIViewController, MySegmentButtonClickProtocol, UICollectionViewDataSource, UICollectionViewDelegate {
     
     private var segmentView: MySegment!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     // 种草小分队
     @IBOutlet var collectionView: UICollectionView!
@@ -34,6 +35,7 @@ class SquareViewController: UIViewController, MySegmentButtonClickProtocol, UICo
         self.buildBarButtonItem()
         
         self.view.setNeedsLayout()
+        
     }
 
     
@@ -101,5 +103,62 @@ class SquareViewController: UIViewController, MySegmentButtonClickProtocol, UICo
     
     
     // MARK: - UICollectionViewDelegate
+    
+    // MARK: - UIScrollViewDelegate
+    
+    var lastContentOffset = 0.0
+    var needUp = false
+    var needDown = true
+    
+//    let views = ["view": self.view]
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        lastContentOffset = Double(scrollView.contentOffset.y)
+        
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if Double(scrollView.contentOffset.y) > (lastContentOffset ) {
+            // up
+            self.hideTabBar()
+        }else {
+            // down
+            self.showTabBar()
+        }
+    }
+    
+    
+    func hideTabBar(){
+        guard needDown else{
+            needUp = true
+            return
+        }
+        needDown = false
+        var frame = self.tabBarController!.tabBar.frame
+        frame.origin.y += frame.size.height
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.tabBarController!.tabBar.frame = frame
+            self.heightConstraint.constant += self.tabBarController!.tabBar.frame.size.height
+            }) { (complete: Bool) -> Void in
+                
+        }
+    }
+    
+    
+    func showTabBar(){
+        guard needUp else{
+            needDown = true
+            return
+        }
+        needUp = false
+        var frame = self.tabBarController!.tabBar.frame
+        frame.origin.y -= frame.size.height
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.tabBarController!.tabBar.frame = frame
+            self.heightConstraint.constant -= self.tabBarController!.tabBar.frame.size.height
+            }) { (complete: Bool) -> Void in
+                
+        }
+    }
     
 }
